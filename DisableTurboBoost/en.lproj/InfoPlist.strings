@@ -1,0 +1,4 @@
+/* Localized versions of Info.plist keys */
+
+CFBundleName = "Intel Turbo Switcher";
+CFBundleDisplayName = "Intel Turbo Switcher";

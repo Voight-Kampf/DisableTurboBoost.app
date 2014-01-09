@@ -1,0 +1,21 @@
+/* Localized versions of Info.plist keys */
+
+BUTTON_ENABLE = "Enable";
+BUTTON_DISABLE = "Disable";
+
+ALERT_HINT = "HINT";
+
+ALERT_MESSAGE_WIN_EANBLE_SUCCEED = "Enable Turbo Boost succeed.";
+ALERT_MESSAGE_EANBLE_SUCCEED_PROMPT = "Enable Turbo Boost succeed, Are you sure to clear application settomgs?";
+ALERT_MESSAGE_ENABLE_FAILED = "Enable Turbo Boost failed.";
+
+ALERT_MESSAGE_DISABLE_SUCCEED = "Disalbe Turbo Boost succeed.";
+ALERT_MESSAGE_DISABLE_FAILED = "Disalbe Turbo Boost failed.";
+
+ALERT_MESSAGE_INPUT_PASS = "Password can't be null, please reinput again.";
+ALERT_MESSAGE_SAVED = "Settings saved.";
+
+ALERT_BTN_YES = "YES";
+ALERT_BTN_NO = "NO";
+ALERT_BTN_OK = "OK";
+

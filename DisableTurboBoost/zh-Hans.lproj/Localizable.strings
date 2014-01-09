@@ -1,0 +1,20 @@
+/* Localized versions of Info.plist keys */
+
+BUTTON_ENABLE = "开启睿频";
+BUTTON_DISABLE = "关闭睿频";
+
+ALERT_HINT = "提示";
+
+ALERT_MESSAGE_WIN_EANBLE_SUCCEED = "启用睿频成功。";
+ALERT_MESSAGE_EANBLE_SUCCEED_PROMPT = "启用睿频成功，清除自动设置配置？";
+ALERT_MESSAGE_ENABLE_FAILED = "启用睿频失败。";
+
+ALERT_MESSAGE_DISABLE_SUCCEED = "关闭睿频成功。";
+ALERT_MESSAGE_DISABLE_FAILED = "关闭睿频失败。";
+
+ALERT_MESSAGE_INPUT_PASS = "请输入密码。";
+ALERT_MESSAGE_SAVED = "设置已保存";
+
+ALERT_BTN_YES = "是";
+ALERT_BTN_NO = "否";
+ALERT_BTN_OK = "确定";

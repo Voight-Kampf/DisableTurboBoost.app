@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		861596A5187E75F300668AAC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 861596A3187E75F300668AAC /* Localizable.strings */; };
 		863F63BD187BE3AB0023370F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863F63BC187BE3AB0023370F /* Cocoa.framework */; };
 		863F63C7187BE3AB0023370F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 863F63C5187BE3AB0023370F /* InfoPlist.strings */; };
 		863F63C9187BE3AB0023370F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 863F63C8187BE3AB0023370F /* main.m */; };
@@ -36,7 +37,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8621376A187C3678000036A9 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_CN; path = zh_CN.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		86159698187E690200668AAC /* DisableTurboBoost-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DisableTurboBoost-Info.plist"; sourceTree = "<group>"; };
+		8615969B187E6BA600668AAC /* DisableTurboBoostProduct.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisableTurboBoostProduct.pch; sourceTree = "<group>"; };
+		861596A0187E742000668AAC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/MainMenu.xib"; sourceTree = "<group>"; };
+		861596A1187E742000668AAC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		861596A2187E742000668AAC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		861596A4187E75F300668AAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		861596A6187E75FE00668AAC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		863F63B9187BE3AB0023370F /* DisableTurboBoost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DisableTurboBoost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		863F63BC187BE3AB0023370F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		863F63BF187BE3AB0023370F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -89,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8615969A187E6B8800668AAC /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				8615969B187E6BA600668AAC /* DisableTurboBoostProduct.pch */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
 		863F63B0187BE3AB0023370F = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +147,7 @@
 		863F63C2187BE3AB0023370F /* DisableTurboBoost */ = {
 			isa = PBXGroup;
 			children = (
+				8615969A187E6B8800668AAC /* Product */,
 				863F63CE187BE3AB0023370F /* AppDelegate.h */,
 				863F63CF187BE3AB0023370F /* AppDelegate.m */,
 				863F63F0187BE4030023370F /* resources */,
@@ -154,6 +170,8 @@
 		863F63C3187BE3AB0023370F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				861596A3187E75F300668AAC /* Localizable.strings */,
+				86159698187E690200668AAC /* DisableTurboBoost-Info.plist */,
 				863F63C5187BE3AB0023370F /* InfoPlist.strings */,
 				863F63C8187BE3AB0023370F /* main.m */,
 				863F63CA187BE3AB0023370F /* DisableTurboBoost-Prefix.pch */,
@@ -247,6 +265,7 @@
 				en,
 				Base,
 				zh_CN,
+				"zh-Hans",
 			);
 			mainGroup = 863F63B0187BE3AB0023370F;
 			productRefGroup = 863F63BA187BE3AB0023370F /* Products */;
@@ -264,6 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				861596A5187E75F300668AAC /* Localizable.strings in Resources */,
 				863F63C7187BE3AB0023370F /* InfoPlist.strings in Resources */,
 				863F63D5187BE3AC0023370F /* Images.xcassets in Resources */,
 				863F63F5187BE4030023370F /* DisableTurboBoost.kext in Resources */,
@@ -314,11 +334,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		861596A3187E75F300668AAC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				861596A4187E75F300668AAC /* en */,
+				861596A6187E75FE00668AAC /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		863F63C5187BE3AB0023370F /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				863F63C6187BE3AB0023370F /* en */,
-				8621376A187C3678000036A9 /* zh_CN */,
+				861596A1187E742000668AAC /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -327,6 +356,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				863F63E4187BE3AC0023370F /* en */,
+				861596A2187E742000668AAC /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -335,6 +365,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				863F63FA187BE6FD0023370F /* en */,
+				861596A0187E742000668AAC /* zh-Hans */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -418,6 +449,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DisableTurboBoost/DisableTurboBoost-Prefix.pch";
 				INFOPLIST_FILE = "DisableTurboBoost/DisableTurboBoost-Info.plist";
+				INFOPLIST_PREFIX_HEADER = Product/DisableTurboBoostProduct.pch;
+				INFOPLIST_PREPROCESS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -432,6 +465,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DisableTurboBoost/DisableTurboBoost-Prefix.pch";
 				INFOPLIST_FILE = "DisableTurboBoost/DisableTurboBoost-Info.plist";
+				INFOPLIST_PREFIX_HEADER = Product/DisableTurboBoostProduct.pch;
+				INFOPLIST_PREPROCESS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

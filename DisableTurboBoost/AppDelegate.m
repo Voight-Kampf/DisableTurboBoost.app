@@ -49,38 +49,38 @@
 {
     if([SystemCommands isModuleLoaded])
     {
-        self.btnTest.title = @"开启睿频";
+        self.btnTest.title = NSLocalizedString(@"BUTTON_ENABLE", nil);
     }
     else
     {
-        self.btnTest.title = @"关闭睿频";
+        self.btnTest.title = NSLocalizedString(@"BUTTON_DISABLE", nil);
     }
 }
 
 - (void)autoLoad
 {
     NSAlert *alert = [[NSAlert alloc] init];
-    [alert setMessageText:@"提示"];
+    [alert setMessageText:NSLocalizedString(@"ALERT_HINT", nil)];
     if([SystemCommands isModuleLoaded])
     {
         if([SystemCommands unLoadModule])
         {
             [alert setAlertStyle:NSInformationalAlertStyle];
             if(canExitWindow)
-                [alert setInformativeText:@"启用睿频成功。"];
+                [alert setInformativeText:NSLocalizedString(@"ALERT_MESSAGE_WIN_EANBLE_SUCCEED", nil)];
             else
             {
-                [alert setInformativeText:@"启用睿频成功，清除自动设置配置？"];
-                [alert addButtonWithTitle:@"否"];
-                [alert addButtonWithTitle:@"是"];
+                [alert setInformativeText:NSLocalizedString(@"ALERT_MESSAGE_EANBLE_SUCCEED_PROMPT", nil)];
+                [alert addButtonWithTitle:NSLocalizedString(@"ALERT_BTN_NO", nil)];
+                [alert addButtonWithTitle:NSLocalizedString(@"ALERT_BTN_YES", nil)];
             }
         }
         else
         {
-            [alert setInformativeText:@"启用睿频失败"];
+            [alert setInformativeText:NSLocalizedString(@"ALERT_MESSAGE_ENABLE_FAILED", nil)];
             [alert setAlertStyle:NSWarningAlertStyle];
             [Settings sharedInstance].password = @"";
-            [alert addButtonWithTitle:@"确定"];
+            [alert addButtonWithTitle:NSLocalizedString(@"ALERT_BTN_OK", nil)];
             [StartupHelper setOpenAtLogin:NO];
         }
     }
@@ -90,7 +90,7 @@
         {
             if(canExitWindow)
             {
-                [alert setInformativeText:@"关闭睿频成功"];
+                [alert setInformativeText:NSLocalizedString(@"ALERT_MESSAGE_DISABLE_SUCCEED", nil)];
                 [alert setAlertStyle:NSInformationalAlertStyle];
             }
             else
@@ -101,12 +101,12 @@
         }
         else
         {
-            [alert setInformativeText:@"关闭睿频失败"];
+            [alert setInformativeText:NSLocalizedString(@"ALERT_MESSAGE_DISABLE_FAILED", nil)];
             [alert setAlertStyle:NSWarningAlertStyle];
             [StartupHelper setOpenAtLogin:NO];
             [Settings sharedInstance].password = @"";
         }
-        [alert addButtonWithTitle:@"确定"];
+        [alert addButtonWithTitle:NSLocalizedString(@"ALERT_BTN_OK", nil)];
     }
     
     [alert beginSheetModalForWindow:[NSApplication sharedApplication].keyWindow modalDelegate:self didEndSelector:@selector(OnExit:returnCode:contextInfo:) contextInfo:nil];
@@ -124,9 +124,9 @@
     if(self.PassText.stringValue.length == 0 && sender != nil)
     {
         NSAlert *alert = [[NSAlert alloc] init];
-        [alert addButtonWithTitle:@"确定"];
-        [alert setMessageText:@"提示"];
-        [alert setInformativeText:@"请输入密码。"];
+        [alert addButtonWithTitle:NSLocalizedString(@"ALERT_BTN_OK", nil)];
+        [alert setMessageText:NSLocalizedString(@"ALERT_HINT", nil)];
+        [alert setInformativeText:NSLocalizedString(@"ALERT_MESSAGE_INPUT_PASS", nil)];
         [alert setAlertStyle:NSInformationalAlertStyle];
         [alert beginSheetModalForWindow:[NSApplication sharedApplication].keyWindow modalDelegate:nil didEndSelector:nil contextInfo:nil];
         [self.PassText selectText:self.PassText];
@@ -142,9 +142,9 @@
     if(sender != nil)
     {
         NSAlert *alert = [[NSAlert alloc] init];
-        [alert addButtonWithTitle:@"确定"];
-        [alert setMessageText:@"提示"];
-        [alert setInformativeText:@"设置已保存"];
+        [alert addButtonWithTitle:NSLocalizedString(@"ALERT_BTN_OK", nil)];
+        [alert setMessageText:NSLocalizedString(@"ALERT_HINT", nil)];
+        [alert setInformativeText:NSLocalizedString(@"ALERT_MESSAGE_SAVED", nil)];
         [alert setAlertStyle:NSInformationalAlertStyle];
         [alert beginSheetModalForWindow:[NSApplication sharedApplication].keyWindow modalDelegate:nil didEndSelector:nil contextInfo:nil];
     }
